@@ -5,7 +5,11 @@
   "projects": {
     "angular-template": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -13,6 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "localize": true,
             "outputPath": "dist/angular-template",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -24,11 +29,14 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           },
           "configurations": {
+            "pl": {
+              "localize": ["pl"]
+            },
             "production": {
               "fileReplacements": [
                 {
@@ -65,6 +73,9 @@
             "browserTarget": "angular-template:build"
           },
           "configurations": {
+            "pl": {
+              "browserTarget": "fast-board:build:pl"
+            },
             "production": {
               "browserTarget": "angular-template:build:production"
             }
@@ -88,7 +99,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           }

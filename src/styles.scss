@@ -1,0 +1,20 @@
+@import '~bootstrap/scss/bootstrap';
+@import 'theme/theme';
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 1rem;
+  color: var(--color-dark);
+}
+
+body {
+  margin: 0;
+  font-family: 'Ubuntu', sans-serif;
+  background: var(--color-background);
+}
+
