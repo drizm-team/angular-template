@@ -7,6 +7,8 @@ import {AppRoutingModule} from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {LoaderModule} from '@drizm/loader';
+
 
 @NgModule({
   declarations: [
@@ -16,7 +18,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    LoaderModule.forRoot()
   ],
   providers: [
     {
