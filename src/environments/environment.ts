@@ -1,5 +1,6 @@
 export const environment = {
-  apiUrl: window.location.origin + '/api/',
-  production: false
+  apiUrl: 'http://localhost:8080/',
+  production: false,
+  stag: false,
+  debug: true
 };
-
